@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <style>
+        
+        :root {
+            --pastel-cream: #f8f1e7;
+            --pastel-brown: #b79b80;
+            --pastel-pink: #e8c9c1;
+            --pastel-green: #d6e5d0;
+            --text-dark: #4b3f37;
+            --hover-pop: scale(1.05);
+        }
+
+        body {
+            margin: 0;
+            font-family: "Georgia", serif;
+            background: var(--pastel-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--pastel-pink);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--pastel-brown);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+            background: var(--pastel-green);
+            border-bottom: 3px solid var(--pastel-brown);
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            transform: var(--hover-pop);
+            color: var(--pastel-brown);
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 35px;
+            transition: 0.3s ease-in-out;
+            border: 2px solid var(--pastel-brown);
+        }
+
+        .card:hover {
+            transform: var(--hover-pop);
+            background: #fff7f2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--pastel-brown);
+            color: white;
+            margin-top: 40px;
+        }
+
+        .profile-img {
+            display: block;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            border: 4px solid var(--pastel-brown);
+            transition: 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: var(--hover-pop);
+        }
+
+            /* ------ GALLERY ------ */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid var(--pastel-brown);
+            transition: 0.3s;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.07);
+            filter: brightness(1.1);
+        }
+
+          /* POP-UP EFFECT */
+    .popup-cat{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      width:100px;
+      height:100px;
+      cursor:pointer;
+      transition:transform .3s ease;
+    }
+    .popup-cat:hover{
+      transform:scale(1.2) rotate(6deg);
+    }
+
+    .popup-box{
+      position:fixed;
+      bottom:130px;
+      right:20px;
+      background:white;
+      border-radius:16px;
+      padding:16px;
+      width:240px;
+      box-shadow:0 8px 18px var(--shadow);
+      border:1px solid rgba(0,0,0,0.08);
+      display:none;
+      animation:fadeIn .3s ease;
+    }
+
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)}}
+
+    .popup-cat:hover + .popup-box{
+      display:block;
+    }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kyla O. Ilao</h1>
+        <p>BSIT Student</p>
+    </header>
+
+    <nav>
+        <a href="#About me">About me</a>
+        <a href="#Interest and Hobbies">Interest and Hobbies</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+   <section id="about me">
+        <div class="card">
+            <h2>About Me</h2>
+            <img src="Ilao , Kyla O. .jpg" class="profile-img" alt="Your Photo" />
+            <p>Hello! I am <strong>Kyla Ilao</strong> 20 years old, lives at Brgy. Pooc, Balayan, Batangas and I'm currently studying at Batangas State University, 1st Year Student-Bachelor Of Science in Information Technology. I love art, crafting, cooking, writing, and making beautiful arts that express creativity.</p>
+        </div>
+        </section>
+
+    <section id="Interest and Hobbies">
+        <div class="card">
+            <h2>Interest and Hobbies</h2>
+            <ul>
+        <li>✨ Drawing and crafting cute designs</li>
+        <li>📚 Editing and designing</li>
+        <li>🎧 Listening to soft music and up beat </li>
+        <li>📸 Taking pictures of cute things, sunset and ocean</li>
+        <li>📝 Writing a story fictional or true story </li>
+        <li>🎸 Loves to play instruments like Guitar, Drums, Violin and Piano</li>
+      </ul>
+            </ul>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="card">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <img src="b7270766f81adeafc93676b9ab1e20d4.jpg" alt="Photo 1" class="gallery-img" />
+                <img src="aMVida poster.png" alt="Photo 2" class="gallery-img" />
+                <img src="IMG_20250222_171718_165@1421835519.jpg" alt="Photo 3" class="gallery-img" />
+                <img src="IMG_20251029_231402_754@-81450188.jpg" alt="Photo 4" class="gallery-img" />
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="card">
+            <h2>Contact Me</h2>
+            <p>Email: <strong>kylailao31@gmail.com</strong></p>
+            <p>Facebook: <strong> Kyla Ilao</strong></p>
+            <p>Instagram: <strong>@k._.yao</strong></p>
+</div>
+    </section>
+
+    <img class="popup-cat" src="cute cat.jpeg" alt="cute cat" />
+
+  <div class="popup-box">
+    <h3>Hello! flower for you 🐱</h3>
+    <p>I'm your little website cat! Hover me anytime when you need company and comfort.</p>
+  </div>
+
+     
+    <footer>
+        © 2025 Kyla Ilao | Personal Portfolio website
+    </footer>
+
+</body>
+</html>
